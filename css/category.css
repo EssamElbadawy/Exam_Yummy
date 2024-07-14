@@ -1,0 +1,50 @@
+.loadingScreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999999;
+    background-color: #5b5b5b;
+}
+
+
+.nav-tab {
+    z-index: 9999999;
+}
+
+.nav-footer {
+    margin-top: 180%;
+}
+
+.logo {
+    width: 50px;
+}
+
+/* .work-img:hover {
+    background-color: #f6f1f1;
+    color: #1e1c1c;
+} */
+
+.img {
+    z-index: 1;
+}
+
+.caption {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+
+.caption h2 {
+    margin-top: 50%;
+}
+
+.work-box:hover .caption {
+    transform: translateY(0);
+}
+
+.bg-transparent::placeholder {
+    font-weight: bold;
+}

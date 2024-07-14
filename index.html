@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="48x48" href=" img/logo.png" type="image/png">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- font Bootstrap link-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/category.css">
+    <!-- Font awsome -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <title>Yummy</title>
+</head>
+<!-- start loadingScreen -->
+<div class="loadingScreen position-fixed top-0 bottom-0 start-0 end-0">
+    <i class="fa-solid fa-spinner fa-5x fa-spin text-white"></i>
+</div>
+<!-- end loadingScreen -->
+
+<body class="bg-black">
+
+    <!-- start NavBar -->
+    <nav>
+        <div class="side-nav-menu min-vh-100 position-fixed d-flex bg-black z-3 animate_animated open">
+            <div class="nav-tab min-vh-100">
+                <div class="nav-tab xx links start-0 ">
+                    <ul class="list-unstyled overflow-hidden p-3  ">
+                        <li role="button"><a class="search text-decoration-none py-3 m-2 text-white" href="#">Search</a>
+                        </li>
+                        <li class="Categories py-3 text-white" role="button"><a
+                                class="Categories text-decoration-none py-2 text-white m-2" href="#">Categories</a></li>
+                        <li class="py-2 text-white" role="button"><a
+                                class="Area text-decoration-none py-2 text-white m-2" href="#">Area</a></li>
+                        <li class="Ingredients py-3 text-white" role="button"><a
+                                class="Ingredients text-decoration-none py-2 text-white m-2" href="#">Ingredients</a>
+                        </li>
+                        <li class="Contact-Us py-2 text-white m-2" role="button">Contact Us</li>
+                        <div class="nav-footer">
+                            <div class="icons">
+                                <i class="fa-brands fa-facebook text-white" role="button"></i>
+                                <i class="fa-brands fa-twitter text-white" role="button"></i>
+                                <i class="fa-solid fa-globe text-white" role="button"></i>
+                            </div>
+                            <div class="footer text-white">
+                                <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                            </div>
+                        </div>
+                </div>
+                </ul>
+            </div>
+            <div
+                class="nav-header d-flex flex-column justify-content-between text-center px-2 bg-white text-black py-4 ">
+                <img class="logo" src="/img/logo.png" alt="" srcset="">
+                <i class="closer fa-solid fa-xmark fs-1" role="button"></i>
+                <div>
+                    <i class="fa-solid fa-globe d-block " role="button"></i>
+                    <i class="fa-solid fa-share-nodes" role="button"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End NavBar -->
+
+    <!-- start Search Input -->
+    <div class="container serch-Container d-none">
+        <div class="row">
+            <div class="row py-4">
+                <div class="col-md-6 searchbox">
+                    <input class="form-control bg-transparent text-white" type="text" placeholder="Search By Name"
+                        id="searchBoxByFullName">
+                </div>
+                <div class="col-md-6">
+                    <input maxlength="1" class="form-control bg-transparent text-white" type="text"
+                        placeholder="Search By First Letter" id="searchBoxByLetter">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- start Meals section -->
+    <section class="meals-sec route ms-5  ">
+        <div class="container">
+            <div class="row" id="searchData">
+
+            </div>
+        </div>
+    </section>
+    <!-- start Meals section -->
+    <!-- End Search Input -->
+
+    <!-- start Meals section -->
+    <section class="meals-sec route ms-5 p-4 ">
+        <div class="container">
+            <div class="row" id="rowData">
+
+            </div>
+        </div>
+    </section>
+    <!-- start Meals section -->
+
+    <!-- start Category section -->
+    <section class="category-sec route ms-5 d-none ">
+        <div class="container">
+            <div class="row" id="categoryData">
+
+            </div>
+        </div>
+    </section>
+    <!-- start Category section -->
+
+    <!-- start Area section -->
+    <section class="Area-sec route ms-5 d-none ">
+        <div class="container">
+            <div class="row" id="areaData">
+            </div>
+    </section>
+    <!-- start Area section -->
+
+
+    <!-- start ingredients section -->
+    <section class="ingredient-sec route ms-5 d-none  ">
+        <div class="container">
+            <div class="row" id="ingredientsData">
+
+            </div>
+    </section>
+    <!-- start ingredients section -->
+
+
+    <!-- start Contact-Us section -->
+    <section class="contactUs-sec route ms-5  d-none">
+        <div class="container align-items-center justify-content-center">
+            <div class="row" id="contactUs">
+                <div class="row g-4 ">
+                    <div class="col-md-6">
+                        <input id="nameInput" type="text" class="form-control" placeholder="Enter Your Name">
+                        <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Special characters and numbers not allowed
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="emailInput" type="email" class="form-control " placeholder="Enter Your Email">
+                        <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Email not valid *exemple@yyy.zzz
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="phoneInput" type="text" class="form-control " placeholder="Enter Your Phone">
+                        <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid Phone Number
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="ageInput" type="number" class="form-control  " placeholder="Enter Your Age">
+                        <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid age
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="passwordInput" type="password" class="form-control "
+                            placeholder="Enter Your Password">
+                        <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Password must be at least 8 characters long, include at least one uppercase letter, one
+                            lowercase letter, one number, and one special character.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="repasswordInput" type="password" class="form-control " placeholder="Repassword">
+                        <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid repassword
+                        </div>
+                    </div>
+
+                    <button id="submitBtn" disabled="" class="btn btn-outline-danger  ">Submit</button>
+
+                </div>
+
+            </div>
+    </section>
+    <!-- End Contact-Us section -->
+
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/search.js"></script>
+    <script src="js/ingredients.js"></script>
+    <script src="js/categoryAndArea.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
